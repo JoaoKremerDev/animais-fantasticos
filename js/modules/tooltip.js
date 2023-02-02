@@ -11,11 +11,12 @@ export default class Tooltip {
   // MOVE A TOOLTIP COM BASE NOS ESTILOS DE ACORDO COM A POSIÇÃO DO MOUSE
   onMouseMove(event) {
     this.tooltipBox.style.top = `${event.pageY + 20}px`;
-    if (event.pageX + 240 > window.innerWidth) {
+    if (event.pageX < window.innerWidth) {
       this.tooltipBox.style.left = `${event.pageX - 190}px`;
     } else {
-      this.tooltipBox.style.left = `${event.pagex + 20}px`;
+      this.tooltipBox.style.left = `${event.pagex + 100}px`;
     }
+    console.log('aaaaaaaa');
   }
 
   // REMOVE OS EVENTOS DE MOUSEMOVE E MOUSELEAVE
